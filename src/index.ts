@@ -1,24 +1,35 @@
-import { AssistantPackage, RuleDefinition } from '@sketch-hq/sketch-assistant-types'
+import { AssistantConfig, AssistantPackage } from '@sketch-hq/sketch-assistant-types'
+import CoreAssistant from '@sketch-hq/sketch-core-assistant'
 
-const helloWorld: RuleDefinition = {
-  rule: async (context) => {
-    context.utils.report('Hello world')
-  },
-  name: 'sketch-assistant-template/hello-world',
-  title: 'Hello World',
-  description: 'Reports a hello world message',
-}
-
-const assistant: AssistantPackage = async () => {
-  return {
-    name: 'sketch-assistant-template',
-    rules: [helloWorld],
-    config: {
-      rules: {
-        'sketch-assistant-template/hello-world': { active: true },
-      },
+export const config: AssistantConfig = {
+  rules: {
+    '@sketch-hq/sketch-core-assistant/borders-no-disabled': {
+      active: true,
     },
-  }
+    '@sketch-hq/sketch-core-assistant/fills-no-disabled': {
+      active: true,
+    },
+    '@sketch-hq/sketch-core-assistant/inner-shadows-no-disabled': {
+      active: true,
+    },
+    '@sketch-hq/sketch-core-assistant/shadows-no-disabled': {
+      active: true,
+    },
+    '@sketch-hq/sketch-core-assistant/groups-no-empty': {
+      active: true,
+    },
+  },
 }
+
+const assistant: AssistantPackage = [
+  CoreAssistant,
+  async () => {
+    return {
+      name: 'tidy-assistant-plus',
+      rules: [],
+      config,
+    }
+  },
+]
 
 export default assistant

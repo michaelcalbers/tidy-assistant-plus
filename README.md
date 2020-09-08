@@ -1,16 +1,25 @@
-# sketch-assistant-template
+# Tidy Plus
 
-> 💁‍♀️ This repository contains a starter project for developing a new Assistant.
+##### by Michael C. Albers
 
-👉
-[Click here to generate a new project using this repository as a template](https://github.com/sketch-hq/sketch-assistant-template/generate)
+![Tidy Plus icon](./.github/images/TidyPlus.png)
 
-## Getting started
+## Leverage and extend
 
-For in-depth guides head over to the [Sketch Developer](https://developer.sketch.com/assistants/)
-site.
+The "tidy-assistant-plus" repository is inspired by and extends
+[Sketch's Tidy assistant](https://www.sketch.com/extensions/assistants/@sketch-hq/sketch-tidy-assistant/).
+The rules in this Assistant are all focused on keeping your Sketch documents as clean and tidy as
+possible.
 
-- [Getting started](https://developer.sketch.com/assistants/getting-started)
-- [Write a rule](https://developer.sketch.com/assistants/write-a-rule)
-- [Publishing](https://developer.sketch.com/assistants/publish)
-- And more!
+## Rules
+
+- [Fills](https://github.com/sketch-hq/sketch-assistants/tree/main/assistants/core/src/rules/fills-no-disabled)
+  with values are active (remove or make active)
+- [Borders](https://github.com/sketch-hq/sketch-assistants/tree/main/assistants/core/src/rules/borders-no-disabled)
+  with values are active (remove or make active)
+- [Shadows](https://github.com/sketch-hq/sketch-assistants/tree/main/assistants/core/src/rules/shadows-no-disabled)
+  with values are active (remove or make active)
+- [Inner Shadows](https://github.com/sketch-hq/sketch-assistants/tree/main/assistants/core/src/rules/inner-shadows-no-disabled)
+  with values are active (remove or make active)
+- [Groups](https://github.com/sketch-hq/sketch-assistants/tree/main/assistants/core/src/rules/groups-no-empty)
+  contain Layers (remove or add content)

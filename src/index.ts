@@ -23,6 +23,14 @@ export const config: AssistantConfig = {
       active: true,
       ruleTitle: 'Groups contain Layers (remove or add content)',
     },
+    '@sketch-hq/sketch-core-assistant/groups-no-redundant': {
+      active: true,
+      ruleTitle: 'Groups contain more than another Group',
+    },
+    '@sketch-hq/sketch-core-assistant/layers-no-loose': {
+      active: true,
+      ruleTitle: 'Layers live inside an Artboard (not loose on the Canvas)',
+    },
   },
 }
 
